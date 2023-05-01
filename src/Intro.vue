@@ -16,6 +16,9 @@ export default {
         if (newConfig.questionTotal > 99) {
           this.config.questionTotal = 99;
         }
+        if (!Number.isInteger(newConfig.questionTotal)) {
+          this.config.questionTotal = Math.floor(newConfig.questionTotal);
+        }
       },
       deep: true,
     }
