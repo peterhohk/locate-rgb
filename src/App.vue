@@ -187,6 +187,16 @@ th, td {
   color: #0000ff;
 }
 /* GENERAL STYLE ENDS */
+/* SCROLLBAR STYLE STARTS */
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-main);
+}
+/* SCROLLBAR STYLE ENDS */
 /* THEME SWITCHER STYLE STARTS */
 body.light {
   --clr-bg: #ffffff;
