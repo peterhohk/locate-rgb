@@ -161,7 +161,7 @@ button {
     color: var(--clr-bg);
   }
 }
-[type="number"], select {
+input[type="number"], select {
   padding: 0 0.125em;
   border: none;
   background-color: transparent;
@@ -238,19 +238,16 @@ body.dark {
     display: block;
     content: "";
     position: absolute;
-    top: 0.0625rem;
-    left: 0.0625rem;
-    width: 0.625rem;
-    height: 0.625rem;
+    inset: 0.0625rem 1.0625rem 0.0625rem 0.0625rem;
     border-radius: 50%;
     background-color: var(--clr-accent);
-    transition: left 0.4s ease-in-out;
+    transition: inset 0.4s ease-in-out;
   }
   &:is(:hover, :focus-visible)::after {
     background-color: var(--clr-main);
   }
   &:checked::after {
-    left: 1.0625rem;
+    inset: 0.0625rem 0.0625rem 0.0625rem 1.0625rem;
   }
   @media screen and (max-width: 600px) {
     margin-left: 0.25rem;
