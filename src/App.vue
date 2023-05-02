@@ -156,7 +156,7 @@ button {
   background-color: var(--clr-bg);
   color: var(--clr-main);
   font-weight: bold;
-  &:is(:hover, :focus-visible) {
+  &:where(:hover, :focus-visible) {
     background-color: var(--clr-accent);
     color: var(--clr-bg);
   }

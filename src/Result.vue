@@ -2,6 +2,11 @@
 export default {
   props: ["scores"],
   emits: ["restart"],
+  data() {
+    return {
+      sortOrder: "questionNum",
+    };
+  },
   methods: {
     colourString(colour) {
       return `(${colour.join(", ")})`
@@ -17,6 +22,16 @@ export default {
     totalScore() {
       return this.scores.reduce((acc, cur) => acc + this.getScore(cur.targetColour, cur.guessColour), 0);
     },
+    sortedScores() {
+      switch (this.sortOrder) {
+        case "questionNum":
+          return this.scores.sort((a, b) => a.questionNum - b.questionNum);
+        case "score":
+          return this.scores.sort((a, b) => this.getScore(b.targetColour, b.guessColour) - this.getScore(a.targetColour, a.guessColour));
+        default:
+          return this.scores;
+      }
+    },
   },
 }
 </script>
@@ -28,14 +43,14 @@ export default {
 <table class="breakdown">
   <thead>
     <tr>
-      <th>#</th>
+      <th><button type="button" class="sort-button" @click="sortOrder='questionNum'">#</button></th>
       <th>Target colour</th>
       <th>Your guess</th>
-      <th>Score</th>
+      <th><button type="button" class="sort-button" @click="sortOrder='score'">Score</button></th>
     </tr>
   </thead>
   <tbody>
-    <tr v-for="score in scores" :key="score.questionNum">
+    <tr v-for="score in sortedScores" :key="score.questionNum">
       <td>{{ score.questionNum }}</td>
       <td><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.targetColour)}`}"></div>{{ colourString(score.targetColour) }}</td>
       <td><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.guessColour)}`}"></div>{{ colourString(score.guessColour) }}</td>
@@ -55,6 +70,17 @@ export default {
   }
   td:has(.colour-render) {
     text-align: left;
+  }
+}
+.sort-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--clr-main);
+  text-decoration: underline;
+  &:is(:hover, :focus-visible) {
+    text-decoration: none;
   }
 }
 .colour-render {
