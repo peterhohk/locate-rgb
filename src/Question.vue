@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     colourString(colour) {
-      return `(${colour.join(", ")})`
+      return `(${colour.join(", ")})`;
     },
     getScore(targetColour, guessColour) {
       const dr = Math.abs(targetColour[0] - guessColour[0]);
@@ -51,7 +51,7 @@ export default {
     }
   },
   unmounted() {
-      clearInterval(this.countdownId);
+    clearInterval(this.countdownId);
   },
 }
 </script>

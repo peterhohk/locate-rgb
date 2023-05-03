@@ -64,10 +64,10 @@ export default {
     <p>Test your familiarity with the RGB colour space</p>
     <p>~ A game by <a href="https://github.com/peterhohk" target="_blank">peterhohk</a> ~</p>
   </template>
-  <fieldset class="theme-switcher">
+  <div class="theme-switcher">
     <span>Theme</span>
     <input type="checkbox" id="theme-toggle" checked v-model="activeTheme" true-value="dark" false-value="light">
-  </fieldset>
+  </div>
 </header>
 <main>
   <template v-if="state==='intro'">
