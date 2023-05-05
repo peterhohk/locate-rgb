@@ -53,7 +53,7 @@ export default {
         <li>ΔRed = 255 - 239 = 16</li>
         <li>ΔGreen = 191 - 166 = 25</li>
         <li>ΔBlue = 78 - 31 = 47</li>
-        <li>=> Score = 500 - 16 - 25 - 47 = 412</li>
+        <li>=> Score = 300 - 16 - 25 - 47 = 212</li>
       </ul>
     </td>
   </tr>
