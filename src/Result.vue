@@ -15,7 +15,7 @@ export default {
       const dr = Math.abs(targetColour[0] - guessColour[0]);
       const dg = Math.abs(targetColour[1] - guessColour[1]);
       const db = Math.abs(targetColour[2] - guessColour[2]);
-      return Math.max(500 - dr - db - dg, 0);
+      return Math.max(300 - dr - db - dg, 0);
     },
   },
   computed: {

@@ -46,14 +46,14 @@ export default {
       Scoring
     </th>
     <td>
-      The maximum score for each question is 500.<br>
+      The maximum score for each question is 300.<br>
       Each point of deviation in the red, green or blue component deducts 1 from the score, down to a minimum of 0.<br>
       E.g. if the target colour is <span style="color: rgb(255 166 78)">(255, 166, 78)</span> and your guess is <span style="color: rgb(239 191 31)">(239, 191, 31)</span>, your score would be:<br>
       <ul class="score-computation">
-        <li>ΔRed = 255 − 239 = 16</li>
+        <li>ΔRed = 255 - 239 = 16</li>
         <li>ΔGreen = 191 - 166 = 25</li>
-        <li>ΔBlue = 78 − 31 = 47</li>
-        <li>=> Score = 500 − 16 − 25 − 47 = 412</li>
+        <li>ΔBlue = 78 - 31 = 47</li>
+        <li>=> Score = 500 - 16 - 25 - 47 = 412</li>
       </ul>
     </td>
   </tr>
