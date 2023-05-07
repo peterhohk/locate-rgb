@@ -93,6 +93,7 @@ export default {
   }
   .score-computation {
     list-style-type: none;
+    padding-left: 1rem;
   }
   @media screen and (max-width: 600px) {
     width: 100%;
