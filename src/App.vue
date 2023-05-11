@@ -61,8 +61,10 @@ export default {
 <header :class="{ expanded: !(state==='question') }">
   <h1>Locate<span class="red">R</span><span class="green">G</span><span class="blue">B</span></h1>
   <template v-if="state==='intro'">
-    <p>Test your familiarity with the RGB colour space</p>
-    <p>~ A game by <a href="https://github.com/peterhohk" target="_blank">peterhohk</a> ~</p>
+    <p>
+      Test your familiarity with the RGB colour space<br>
+      ~ A game by <a href="https://github.com/peterhohk" target="_blank">peterhohk</a> ~
+    </p>
   </template>
   <div class="theme-switcher">
     <span>Theme</span>
@@ -122,7 +124,6 @@ header {
   margin-bottom: 1rem;
   h1 {
     font-size: 2rem;
-    font-weight: normal;
     transition: font-size 0.4s ease-in-out;
   }
   &.expanded h1 {
@@ -131,7 +132,6 @@ header {
 }
 h2 {
   font-size: 1.25rem;
-  font-weight: normal;
 }
 h3 {
   font-size: 1rem;
