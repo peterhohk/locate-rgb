@@ -210,26 +210,17 @@ body.dark {
   --clr-accent: #bfbfbf;
 }
 .theme-switcher {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  width: min-content;
-  padding: 0;
-  border: none;
-  &:is(:hover, :focus-within) {
-    opacity: 1;
-  }
-  @media screen and (max-width: 600px) {
-    position: relative;
-    top: auto;
-    right: auto;
-    width: auto;
-    margin: auto;
+  @media screen and (min-width: 600px) {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    width: min-content;
   }
 }
 #theme-toggle {
   appearance: none;
   position: relative;
+  margin-left: 0.25rem;
   width: 2rem;
   height: 1rem;
   border: 0.125rem solid var(--clr-main);
@@ -250,8 +241,8 @@ body.dark {
   &:checked::after {
     inset: 0.0625rem 0.0625rem 0.0625rem 1.0625rem;
   }
-  @media screen and (max-width: 600px) {
-    margin-left: 0.25rem;
+  @media screen and (min-width: 600px) {
+    margin-left: 0;
   }
 }
 /* THEME SWITCHER STYLE ENDS */

@@ -93,20 +93,20 @@ export default {
 .question-container {
   display: grid;
   grid-template-areas:
-    "target-header guess-header"
-    "target-body   guess-body  ";
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+    "target-header"
+    "target-body  "
+    "guess-header "
+    "guess-body   ";
+  grid-template-columns: 1fr;
   gap: 0.25rem 1rem;
-  max-width: 864px;
   margin: 0.25rem auto;
-  @media screen and (max-width: 600px) {
+  max-width: 216px;
+  @media screen and (min-width: 600px) {
     grid-template-areas:
-      "target-header"
-      "target-body  "
-      "guess-header "
-      "guess-body   ";
-    grid-template-columns: 1fr;
-    max-width: 216px;
+      "target-header guess-header"
+      "target-body   guess-body  ";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: min(864px, 75%);
   }
 }
 $parts: target-header, target-body, guess-header, guess-body;
@@ -150,11 +150,11 @@ $parts: target-header, target-body, guess-header, guess-body;
 }
 .guess-render {
   margin: auto;
-  width: 50%;
+  width: 100%;
   aspect-ratio: 1;
   border: 0.125em solid;
-  @media screen and (max-width: 600px) {
-    width: 100%;
+  @media screen and (min-width: 600px) {
+    width: 50%;
   }
 }
 </style>

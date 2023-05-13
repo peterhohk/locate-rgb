@@ -80,8 +80,8 @@ export default {
 
 <style lang="scss">
 .explain {
-  width: 75%;
   margin: 0.25rem auto;
+  width: 100%;
   th {
     border-right: 0.125rem solid;
     text-decoration: underline;
@@ -95,8 +95,8 @@ export default {
     list-style-type: none;
     padding-left: 1rem;
   }
-  @media screen and (max-width: 600px) {
-    width: 100%;
+  @media screen and (min-width: 600px) {
+    width: 75%;
   }
 }
 </style>
