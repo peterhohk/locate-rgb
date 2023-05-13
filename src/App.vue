@@ -144,9 +144,11 @@ a:where(:hover, :focus-visible, :active) {
   color: var(--clr-main);
   text-shadow: 0 0 0.0625em;
 }
-button, input, label, select {
+button, input, select {
   font: inherit;
   line-height: inherit;
+}
+button, label, select {
   cursor: pointer;
 }
 button {

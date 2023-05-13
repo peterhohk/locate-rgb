@@ -63,14 +63,18 @@ export default {
     </th>
     <td>
       <form @change="$emit('updateConfig', config)">
-        Number of questions: <input type="number" min="1" max="99" v-model="config.questionTotal"><br>
-        Time limit:
-        <select v-model.number="config.timeLimit">
-          <option :value="-1">None</option>
-          <option :value="30">30 seconds</option>
-          <option :value="20">20 seconds</option>
-          <option :value="10">10 seconds</option>
-        </select>
+        <label>
+          Number of questions: <input type="number" min="1" max="99" v-model="config.questionTotal">
+        </label><br>
+        <label>
+          Time limit:
+          <select v-model.number="config.timeLimit">
+            <option :value="-1">None</option>
+            <option :value="30">30 seconds</option>
+            <option :value="20">20 seconds</option>
+            <option :value="10">10 seconds</option>
+          </select>
+        </label>
       </form>
     </td>
   </tr>
