@@ -111,7 +111,7 @@ button, input, select {
   font: inherit;
   line-height: inherit;
 }
-button, label, select {
+button, label, select, [type="checkbox"], [type="range"] {
   cursor: pointer;
 }
 table {
@@ -169,7 +169,7 @@ button {
     color: var(--clr-bg);
   }
 }
-input[type="number"], select {
+[type="number"], select {
   padding: 0 0.125em;
   border: none;
   background-color: transparent;
