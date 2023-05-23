@@ -102,14 +102,26 @@ export default {
 </template>
 
 <style lang="scss">
-/* GENERAL STYLE STARTS */
-:root {
-  font-size: clamp(16px, 3vw, 32px);
-}
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+button, input, select {
+  font: inherit;
+  line-height: inherit;
+}
+button, label, select {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* RESET ENDS */
+/* GENERAL STYLE STARTS */
+:root {
+  font-size: clamp(16px, 3vw, 32px);
 }
 body {
   margin-bottom: 1rem;
@@ -144,13 +156,6 @@ a:where(:hover, :focus-visible, :active) {
   color: var(--clr-main);
   text-shadow: 0 0 0.0625em;
 }
-button, input, select {
-  font: inherit;
-  line-height: inherit;
-}
-button, label, select {
-  cursor: pointer;
-}
 button {
   padding: 0.125em 0.5em;
   margin: 0.25rem;
@@ -173,9 +178,6 @@ input[type="number"], select {
 }
 option {
   color: initial;
-}
-table {
-  border-collapse: collapse;
 }
 th, td {
   padding: 0.25rem;
