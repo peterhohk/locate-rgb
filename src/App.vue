@@ -61,10 +61,7 @@ export default {
 <header :class="{ expanded: !(state==='question') }">
   <h1>Locate<span class="red">R</span><span class="green">G</span><span class="blue">B</span></h1>
   <template v-if="state==='intro'">
-    <p>
-      Test your familiarity with the RGB colour space<br>
-      ~ A game by <a href="https://github.com/peterhohk" target="_blank">peterhohk</a> ~
-    </p>
+    <p>Test your familiarity with the RGB colour space</p>
   </template>
   <div class="theme-switcher">
     <span>Theme</span>
@@ -99,6 +96,9 @@ export default {
     />
   </template>
 </main>
+<footer>
+  ©️ 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a>
+</footer>
 </template>
 
 <style lang="scss">
@@ -190,6 +190,10 @@ th, td {
 }
 .blue {
   color: #0000ff;
+}
+footer {
+  font-size: 0.5rem;
+  text-align: right;
 }
 /* GENERAL STYLE ENDS */
 /* SCROLLBAR STYLE STARTS */
