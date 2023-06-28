@@ -101,7 +101,7 @@ export default {
   gap: 0.25rem 1rem;
   margin: 0.25rem auto;
   max-width: 216px;
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     grid-template-areas:
       "target-header guess-header"
       "target-body   guess-body  ";
@@ -153,7 +153,7 @@ $parts: target-header, target-body, guess-header, guess-body;
   width: 100%;
   aspect-ratio: 1;
   border: 0.125em solid;
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     width: 50%;
   }
 }

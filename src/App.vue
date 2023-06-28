@@ -218,7 +218,7 @@ body.dark {
   --clr-accent: #bfbfbf;
 }
 .theme-switcher {
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     position: absolute;
     top: 0.5rem;
     right: 1rem;
@@ -249,7 +249,7 @@ body.dark {
   &:checked::after {
     inset: 0.0625rem 0.0625rem 0.0625rem 1.0625rem;
   }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     margin-left: 0;
   }
 }
