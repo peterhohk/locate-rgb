@@ -121,7 +121,7 @@ table {
 /* RESET ENDS */
 /* GENERAL STYLE STARTS */
 :root {
-  font-size: clamp(16px, 3vw, 32px);
+  font-size: clamp(1rem, 3vw, 2rem);
 }
 body {
   margin-bottom: 1rem;
@@ -199,8 +199,8 @@ footer {
 /* SCROLLBAR STYLE STARTS */
 ::-webkit-scrollbar {
   background-color: transparent;
-  width: 6px;
-  height: 6px;
+  width: 0.375rem;
+  height: 0.375rem;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--clr-main);
@@ -218,7 +218,7 @@ body.dark {
   --clr-accent: #bfbfbf;
 }
 .theme-switcher {
-  @media (min-width: 600px) {
+  @media (min-width: 36rem) {
     position: absolute;
     top: 0.5rem;
     right: 1rem;
@@ -249,7 +249,7 @@ body.dark {
   &:checked::after {
     inset: 0.0625rem 0.0625rem 0.0625rem 1.0625rem;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 36rem) {
     margin-left: 0;
   }
 }

@@ -63,7 +63,7 @@ export default {
 
 <style lang="scss">
 .breakdown {
-  width: min(864px, 100%);
+  width: min(32rem, 100%);
   margin: 0.25rem auto;
   th {
     border-bottom: 0.125rem solid;

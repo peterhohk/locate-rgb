@@ -99,7 +99,7 @@ export default {
     list-style-type: none;
     padding-left: 1rem;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 36rem) {
     width: 75%;
   }
 }

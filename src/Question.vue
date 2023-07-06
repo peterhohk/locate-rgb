@@ -100,13 +100,13 @@ export default {
   grid-template-columns: 1fr;
   gap: 0.25rem 1rem;
   margin: 0.25rem auto;
-  max-width: 216px;
-  @media (min-width: 600px) {
+  max-width: 16rem;
+  @media (min-width: 36rem) {
     grid-template-areas:
       "target-header guess-header"
       "target-body   guess-body  ";
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: min(864px, 75%);
+    max-width: min(24rem, 75%);
   }
 }
 $parts: target-header, target-body, guess-header, guess-body;
@@ -153,7 +153,7 @@ $parts: target-header, target-body, guess-header, guess-body;
   width: 100%;
   aspect-ratio: 1;
   border: 0.125em solid;
-  @media (min-width: 600px) {
+  @media (min-width: 36rem) {
     width: 50%;
   }
 }
