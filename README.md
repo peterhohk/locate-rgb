@@ -9,7 +9,6 @@ Created as a practice project for writing Vue apps.
 - HTML & CSS
 - JavaScript
 - [Vue](https://vuejs.org/)
-- [Sass](https://sass-lang.com/)
 
 ## Licensing
 
