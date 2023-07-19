@@ -52,8 +52,8 @@ export default {
   <tbody>
     <tr v-for="score in sortedScores" :key="score.questionNum">
       <td>{{ score.questionNum }}</td>
-      <td><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.targetColour)}`}"></div>{{ colourString(score.targetColour) }}</td>
-      <td><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.guessColour)}`}"></div>{{ colourString(score.guessColour) }}</td>
+      <td><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.targetColour)}`}"></div><span class="rgb-string">{{ colourString(score.targetColour) }}</span></td>
+      <td><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.guessColour)}`}"></div><span class="rgb-string">{{ colourString(score.guessColour) }}</span></td>
       <td>{{ getScore(score.targetColour, score.guessColour) }}</td>
     </tr>
   </tbody>
@@ -61,16 +61,19 @@ export default {
 <button type="button" @click="$emit('restart')">Restart</button>
 </template>
 
-<style lang="scss">
+<style>
 .breakdown {
   width: min(32rem, 100%);
   margin: 0.25rem auto;
-  th {
-    border-bottom: 0.125rem solid;
-  }
-  td:has(.colour-render) {
-    text-align: left;
-  }
+}
+.breakdown th {
+  border-bottom: 0.125rem solid;
+}
+.breakdown td:has(.colour-render) {
+  text-align: left;
+}
+.breakdown .rgb-string {
+  display: inline-block;
 }
 .sort-button {
   margin: 0;
@@ -79,9 +82,9 @@ export default {
   background-color: transparent;
   color: var(--clr-main);
   text-decoration: underline;
-  &:is(:hover, :focus-visible) {
-    text-decoration: none;
-  }
+}
+.sort-button:is(:hover, :focus-visible) {
+  text-decoration: none;
 }
 .colour-render {
   display: inline-block;

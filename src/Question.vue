@@ -89,7 +89,7 @@ export default {
 <button type="button" @click="$emit('restart')">Restart</button>
 </template>
 
-<style lang="scss">
+<style>
 .question-container {
   display: grid;
   grid-template-areas:
@@ -101,20 +101,11 @@ export default {
   gap: 0.25rem 1rem;
   margin: 0.25rem auto;
   max-width: 16rem;
-  @media (min-width: 36rem) {
-    grid-template-areas:
-      "target-header guess-header"
-      "target-body   guess-body  ";
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: min(24rem, 75%);
-  }
 }
-$parts: target-header, target-body, guess-header, guess-body;
-@each $part in $parts {
-  .#{$part} {
-    grid-area: $part;
-  }
-}
+.target-header { grid-area: target-header; }
+.target-body { grid-area: target-body; }
+.guess-header { grid-area: guess-header; }
+.guess-body { grid-area: guess-body; }
 .target-body {
   position: relative;
   aspect-ratio: 1;
@@ -135,25 +126,34 @@ $parts: target-header, target-body, guess-header, guess-body;
   align-items: center;
   gap: 0.25rem;
   min-height: 12rem;
-  &.before-submit {
-    grid-template-columns: 2rem 1fr 2rem;
-    grid-template-rows: repeat(auto-fit, 2rem);
-  }
-  &.after-submit {
-    grid-template-columns: 1fr;
-  }
-  button {
-    margin: auto;
-    width: fit-content;
-    grid-column: 1 / -1;
-  }
+}
+.guess-body.before-submit {
+  grid-template-columns: 2rem 1fr 2rem;
+  grid-template-rows: repeat(auto-fit, 2rem);
+}
+.guess-body.after-submit {
+  grid-template-columns: 1fr;
+}
+.guess-body button {
+  margin: auto;
+  width: fit-content;
+  grid-column: 1 / -1;
 }
 .guess-render {
   margin: auto;
   width: 100%;
   aspect-ratio: 1;
   border: 0.125em solid;
-  @media (min-width: 36rem) {
+}
+@media (min-width: 36rem) {
+  .question-container {
+    grid-template-areas:
+      "target-header guess-header"
+      "target-body   guess-body  ";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: min(24rem, 75%);
+  }
+  .guess-render {
     width: 50%;
   }
 }

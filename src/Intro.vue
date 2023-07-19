@@ -82,24 +82,26 @@ export default {
 <button type="button" @click="$emit('start')">Start game!</button>
 </template>
 
-<style lang="scss">
+<style>
 .explain {
   margin: 0.25rem auto;
   width: 100%;
-  th {
-    border-right: 0.125rem solid;
-    text-decoration: underline;
-    rotate: -5deg;
-  }
-  td {
-    font-size: 0.75rem;
-    text-align: left;
-  }
-  .score-computation {
-    list-style-type: none;
-    padding-left: 1rem;
-  }
-  @media (min-width: 36rem) {
+}
+.explain th {
+  border-right: 0.125rem solid;
+  text-decoration: underline;
+  rotate: -5deg;
+}
+.explain td {
+  font-size: 0.75rem;
+  text-align: left;
+}
+.explain .score-computation {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+@media (min-width: 36rem) {
+  .explain {
     width: 75%;
   }
 }

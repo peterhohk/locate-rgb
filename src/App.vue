@@ -101,7 +101,7 @@ export default {
 </footer>
 </template>
 
-<style lang="scss">
+<style>
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -134,13 +134,13 @@ body {
 }
 header {
   margin-bottom: 1rem;
-  h1 {
-    font-size: 2rem;
-    transition: font-size 0.4s ease-in-out;
-  }
-  &.expanded h1 {
-    font-size: 3rem;
-  }
+}
+header h1 {
+  font-size: 2rem;
+  transition: font-size 0.4s ease-in-out;
+}
+header.expanded h1 {
+  font-size: 3rem;
 }
 h2 {
   font-size: 1.25rem;
@@ -164,10 +164,10 @@ button {
   background-color: var(--clr-bg);
   color: var(--clr-main);
   font-weight: bold;
-  &:where(:hover, :focus-visible) {
-    background-color: var(--clr-accent);
-    color: var(--clr-bg);
-  }
+}
+button:where(:hover, :focus-visible) {
+  background-color: var(--clr-accent);
+  color: var(--clr-bg);
 }
 [type="number"], select {
   padding: 0 0.125em;
@@ -217,14 +217,6 @@ body.dark {
   --clr-main: #ffffff;
   --clr-accent: #bfbfbf;
 }
-.theme-switcher {
-  @media (min-width: 36rem) {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    width: min-content;
-  }
-}
 #theme-toggle {
   appearance: none;
   position: relative;
@@ -234,22 +226,30 @@ body.dark {
   border: 0.125rem solid var(--clr-main);
   border-radius: 0.5rem;
   vertical-align: middle;
-  &::after {
-    display: block;
-    content: "";
+}
+#theme-toggle::after {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0.0625rem 1.0625rem 0.0625rem 0.0625rem;
+  border-radius: 50%;
+  background-color: var(--clr-accent);
+  transition: inset 0.4s ease-in-out;
+}
+#theme-toggle:is(:hover, :focus-visible)::after {
+  background-color: var(--clr-main);
+}
+#theme-toggle:checked::after {
+  inset: 0.0625rem 0.0625rem 0.0625rem 1.0625rem;
+}
+@media (min-width: 36rem) {
+  .theme-switcher {
     position: absolute;
-    inset: 0.0625rem 1.0625rem 0.0625rem 0.0625rem;
-    border-radius: 50%;
-    background-color: var(--clr-accent);
-    transition: inset 0.4s ease-in-out;
+    top: 0.5rem;
+    right: 1rem;
+    width: min-content;
   }
-  &:is(:hover, :focus-visible)::after {
-    background-color: var(--clr-main);
-  }
-  &:checked::after {
-    inset: 0.0625rem 0.0625rem 0.0625rem 1.0625rem;
-  }
-  @media (min-width: 36rem) {
+  #theme-toggle {
     margin-left: 0;
   }
 }
