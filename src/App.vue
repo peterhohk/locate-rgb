@@ -52,7 +52,6 @@ export default {
   },
   mounted() {
     document.body.className = this.activeTheme;
-    console.log("I see you, dirty cheater ;)");
   },
 };
 </script>
