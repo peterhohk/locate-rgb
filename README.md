@@ -1,6 +1,6 @@
 # LocateRGB
 
-A simple game about RGB colour space.
+A small game in RGB colour space.
 
 Created as a practice project for writing Vue apps.
 
