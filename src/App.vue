@@ -191,6 +191,7 @@ th, td {
   color: #0000ff;
 }
 footer {
+  margin-right: 1em;
   font-size: 0.5rem;
   text-align: right;
 }
@@ -198,8 +199,11 @@ footer {
 /* SCROLLBAR STYLE STARTS */
 ::-webkit-scrollbar {
   background-color: transparent;
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 0.25rem;
+  height: 0.25rem;
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+  background-color: var(--clr-bg);
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--clr-main);
