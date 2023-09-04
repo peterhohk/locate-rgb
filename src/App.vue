@@ -108,7 +108,6 @@ export default {
 }
 button, input, select {
   font: inherit;
-  line-height: inherit;
 }
 button, label, select, [type="checkbox"], [type="range"] {
   cursor: pointer;
