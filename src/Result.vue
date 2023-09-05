@@ -12,10 +12,10 @@ export default {
       return `(${colour.join(", ")})`;
     },
     getScore(targetColour, guessColour) {
-      const dr = Math.abs(targetColour[0] - guessColour[0]);
-      const dg = Math.abs(targetColour[1] - guessColour[1]);
-      const db = Math.abs(targetColour[2] - guessColour[2]);
-      return Math.max(300 - dr - db - dg, 0);
+      const dr = Math.min(Math.abs(targetColour[0] - guessColour[0]), 100);
+      const dg = Math.min(Math.abs(targetColour[1] - guessColour[1]), 100);
+      const db = Math.min(Math.abs(targetColour[2] - guessColour[2]), 100);
+      return 300 - dr - db - dg;
     },
   },
   computed: {
