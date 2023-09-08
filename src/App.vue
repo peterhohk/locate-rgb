@@ -150,7 +150,7 @@ h3 {
 a:where(:link, :visited) {
   color: var(--clr-accent);
 }
-a:where(:hover, :focus-visible, :active) {
+a:where(:hover, :focus-visible) {
   color: var(--clr-main);
   text-shadow: 0 0 0.0625em;
 }
