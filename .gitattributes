@@ -1,2 +1,3 @@
-assets/*.css linguist-generated
-assets/*.js linguist-generated
+docs/index.html linguist-generated
+docs/assets/*.css linguist-generated
+docs/assets/*.js linguist-generated
