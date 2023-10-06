@@ -4,7 +4,7 @@ A small game in RGB colour space.
 
 Created as a practice project for writing Vue apps.
 
-## Techs used
+## Tech stack
 
 - HTML & CSS
 - JavaScript
