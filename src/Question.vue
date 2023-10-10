@@ -128,7 +128,7 @@ export default {
   min-height: 12rem;
 }
 .guess-body.before-submit {
-  grid-template-columns: 2rem 1fr 2rem;
+  grid-template-columns: 2rem minmax(0, 1fr) 2rem;
   grid-template-rows: repeat(auto-fit, 2rem);
 }
 .guess-body.after-submit {

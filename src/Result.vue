@@ -52,8 +52,8 @@ export default {
   <tbody>
     <tr v-for="score in sortedScores" :key="score.questionNum">
       <td>{{ score.questionNum }}</td>
-      <td><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.targetColour)}`}"></div><span class="rgb-string">{{ colourString(score.targetColour) }}</span></td>
-      <td><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.guessColour)}`}"></div><span class="rgb-string">{{ colourString(score.guessColour) }}</span></td>
+      <td class="colour-cell"><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.targetColour)}`}"></div><span class="rgb-string">{{ colourString(score.targetColour) }}</span></td>
+      <td class="colour-cell"><div class="colour-render" :style="{backgroundColor: `rgb${colourString(score.guessColour)}`}"></div><span class="rgb-string">{{ colourString(score.guessColour) }}</span></td>
       <td>{{ getScore(score.targetColour, score.guessColour) }}</td>
     </tr>
   </tbody>
@@ -69,7 +69,7 @@ export default {
 .breakdown th {
   border-bottom: 0.125rem solid;
 }
-.breakdown td:has(.colour-render) {
+.breakdown .colour-cell {
   text-align: left;
 }
 .breakdown .rgb-string {

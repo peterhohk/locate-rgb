@@ -96,6 +96,9 @@ export default {
   font-size: 0.75rem;
   text-align: left;
 }
+.explain input {
+  max-width: 4rem;
+}
 .explain .score-computation {
   list-style-type: none;
   padding-left: 1rem;

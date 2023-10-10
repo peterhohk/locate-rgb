@@ -64,7 +64,7 @@ export default {
   </template>
   <div class="theme-switcher">
     <span>Theme</span>
-    <input type="checkbox" id="theme-toggle" checked v-model="activeTheme" true-value="dark" false-value="light">
+    <input type="checkbox" name="theme-toggle" class="theme-toggle" checked v-model="activeTheme" true-value="dark" false-value="light">
   </div>
 </header>
 <main>
@@ -219,7 +219,7 @@ body.dark {
   --clr-main: #ffffff;
   --clr-accent: #bfbfbf;
 }
-#theme-toggle {
+.theme-toggle {
   appearance: none;
   position: relative;
   margin-left: 0.25rem;
@@ -229,7 +229,7 @@ body.dark {
   border-radius: 0.5rem;
   vertical-align: middle;
 }
-#theme-toggle::after {
+.theme-toggle::after {
   display: block;
   content: "";
   position: absolute;
@@ -238,10 +238,10 @@ body.dark {
   background-color: var(--clr-accent);
   transition: inset 0.4s ease-in-out;
 }
-#theme-toggle:is(:hover, :focus-visible)::after {
+.theme-toggle:is(:hover, :focus-visible)::after {
   background-color: var(--clr-main);
 }
-#theme-toggle:checked::after {
+.theme-toggle:checked::after {
   inset: 0.0625rem 0.0625rem 0.0625rem 1.0625rem;
 }
 @media (min-width: 36rem) {
@@ -251,7 +251,7 @@ body.dark {
     right: 1rem;
     width: min-content;
   }
-  #theme-toggle {
+  .theme-toggle {
     margin-left: 0;
   }
 }
