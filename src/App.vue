@@ -194,8 +194,6 @@ footer {
   font-size: 0.5rem;
   text-align: right;
 }
-/* GENERAL STYLE ENDS */
-/* SCROLLBAR STYLE STARTS */
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 0.25rem;
@@ -207,7 +205,7 @@ footer {
 ::-webkit-scrollbar-thumb {
   background-color: var(--clr-main);
 }
-/* SCROLLBAR STYLE ENDS */
+/* GENERAL STYLE ENDS */
 /* THEME SWITCHER STYLE STARTS */
 body.light {
   --clr-bg: #ffffff;
