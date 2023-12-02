@@ -194,17 +194,6 @@ footer {
   font-size: 0.5rem;
   text-align: right;
 }
-::-webkit-scrollbar {
-  background-color: transparent;
-  width: 0.25rem;
-  height: 0.25rem;
-}
-::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-  background-color: var(--clr-bg);
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--clr-main);
-}
 /* GENERAL STYLE ENDS */
 /* THEME SWITCHER STYLE STARTS */
 body.light {
