@@ -1,6 +1,6 @@
 # LocateRGB
 
-A small game in RGB colour space.
+Small game in RGB colour space.
 
 ## Tech stack
 
