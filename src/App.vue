@@ -96,7 +96,7 @@ export default {
   </template>
 </main>
 <footer>
-  ©️ 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a>
+  (C)️ 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a>
 </footer>
 </template>
 
